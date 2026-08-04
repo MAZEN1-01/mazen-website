@@ -14,7 +14,7 @@ body{
     min-height: 100vh;
     font-family: 'Manrope', sans-serif;
     overflow: hidden;
-    background: url("assets/images/background.jpg") center center / cover no-repeat fixed;
+    
     color: #fff;
 }
 
@@ -103,8 +103,8 @@ body{
 /* صورة البروفايل */
 
 .profile-image{
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
 
     border-radius: 50%;
     object-fit: cover;
@@ -119,7 +119,7 @@ body{
 .name{
     font-family: "PT Serif", serif;
 
-    font-size: 78px;
+    font-size: 60px;
     font-weight: 700;
 
     letter-spacing: 4px;
@@ -160,7 +160,7 @@ body{
 /* ========================================= */
 
 .social-links{
-    width: 360px;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -338,50 +338,80 @@ body{
 /* الجوال والأجهزة الصغيرة */
 /* ========================================= */
 
-@media (max-width: 768px){
+/* ===========================
+   Mobile
+=========================== */
 
+@media (max-width:768px){
+
+    /* الشريط العلوي */
     .top-bar{
-        left: 20px;
-        right: 20px;
-        top: 20px;
+        left:20px;
+        right:20px;
+        top:20px;
     }
 
     .location,
     .time{
-        font-size: 12px;
-        letter-spacing: 1px;
+        font-size:12px;
+        letter-spacing:1px;
     }
 
+    /* رفع المحتوى للأعلى */
+    .hero{
+        transform:translateY(-20px);
+    }
+
+    /* صورة البروفايل */
     .profile-image{
-        width: 130px;
-        height: 130px;
+        width:115px;
+        height:115px;
+        margin-bottom:18px;
     }
 
+    /* الاسم */
     .name{
-        font-size: 48px;
-        letter-spacing: 6px;
+        font-size:56px;
+        letter-spacing:4px;
+        margin-bottom:8px;
     }
 
+    /* CINEMATIC */
     .job-title{
-        font-size: 15px;
-        letter-spacing: 3px;
+        font-size:14px;
+        letter-spacing:3px;
+        margin-bottom:12px;
     }
 
+    /* الوصف */
     .description{
-        font-size: 18px;
-        padding: 0 20px;
+        font-size:17px;
+        line-height:1.4;
+        padding:0 20px;
+        margin-bottom:30px;
     }
 
+    /* الأزرار */
     .social-links{
-        width: 90%;
-        max-width: 340px;
+        width:100%;
+        gap:14px;
+        padding:0 18px;
     }
 
     .social-btn{
-        padding: 16px 18px;
-        font-size: 14px;
+        width:100%;
+        max-width:340px;
+        padding:18px 22px;
+        border-radius:18px;
     }
 
+    .social-btn i{
+        font-size:28px;
+    }
+
+    .social-btn span{
+        font-size:17px;
+    }
 }
 
 /* ========================================= */
@@ -447,4 +477,20 @@ body{
 
     box-shadow: 0 15px 35px rgba(0,0,0,.35);
 
+}
+
+#background-video{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: -1;
 }

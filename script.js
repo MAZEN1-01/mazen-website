@@ -31,6 +31,6 @@ window.addEventListener("load", () => {
 
         document.getElementById("loader").classList.add("hide");
 
-    }, 1100);
+    }, 500);
 
 });

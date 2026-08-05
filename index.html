@@ -1,35 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik+Spray+Paint&family=Sekuya&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>Mazen</title>
+
+    <link rel="stylesheet" href="style.css">
+  
 </head>
+
 <body>
-    <body>
+   <div id="splash">
 
-<div class="maintenance">
-
-    <img src="assets/images/icon.png" alt="Logo" class="logo">
-
-    <h1>MAZEN</h1>
-
-    <p class="title">CINEMATIC</p>
-
-    <h2>🚧 الموقع قيد الصيانة</h2>
-
-    <p class="text">
-        نعمل حالياً على تطوير الموقع وإضافة تجربة أفضل.<br>
-        سيتم إطلاق النسخة الجديدة قريباً.
-    </p>
-
-    <p class="text-en">
-        Website Under Maintenance<br>
-        A new experience is coming soon.
-    </p>
+    <h1>كل لقطة  <br> تحكي قصة</h1>
 
 </div>
+    <!-- فيديو الخلفية -->
+
+    <video id="background-video" autoplay muted loop playsinline>
+        <source src="assets/video/background.mp4" type="video/mp4">
+    </video>
+
+    <!-- طبقة التعتيم -->
+
+    <div class="overlay"></div>
+
+    <!-- محتوى الموقع -->
+
+    <div class="container" id="content">
+
+    <div class="top-bar">
+
+        <div class="location">
+            📍 Abha, Saudi Arabia
+        </div>
+
+        <div class="time" id="time">
+            00:00
+        </div>
+
+    </div>
+
+    <!-- صورة البروفايل -->
+
+    <div class="profile">
+
+        <img src="assets/images/profile.png" alt="Profile">
+
+    </div>
+    <div class="hero">
+
+    <h1 class="name">
+        MAZEN
+    </h1>
+
+    <p class="job-title">
+        CINEMATIC
+    </p>
+
+    <p class="description">
+        كل لقطة تحكي قصة<br>
+        أوثق اللحظات 
+    </p>
+
+
+   <div class="links-card">
+    <a href="https://www.instagram.com/t.11il?igsh=NjBxbmhhcmdrbng3&utm_source=qr" class="social-btn">
+    <i class="fab fa-instagram"></i>
+    Instagram
+</a>
+
+<a href="https://www.tiktok.com/@t.02il?_r=1&_t=ZS-98aAoPzMKPs" class="social-btn">
+    <i class="fab fa-tiktok"></i>
+    TikTok • Cinematic
+</a>
+
+<a href="https://www.tiktok.com/@zero_j65?_r=1&_t=ZS-98aArBAtcRh" class="social-btn">
+    <i class="fab fa-tiktok"></i>
+    TikTok • Gaming
+</a>
+
+<a href="https://snapchat.com/t/84i74TbP" class="social-btn">
+    <i class="fab fa-snapchat"></i>
+    Snapchat
+</a>
+
+<a href="https://t.me/mazendaa" class="social-btn">
+    <i class="fab fa-telegram"></i>
+    Telegram
+</a>
+<a href="portfolio.html" class="portfolio-btn">
+    <i class="fa-solid fa-images"></i>
+    <span>Portfolio</span>
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+</div>
+</div>
+<footer class="footer">
+
+    <p>© 2026 MAZEN</p>
+
+    <span>Every Frame Tells a Story.</span>
+
+</footer>
+    <script src="script.js"></script>
 
 </body>
-</body>
+
 </html>

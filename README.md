@@ -1,7 +1,7 @@
 # MAZEN — Cinematic Stories
 
-Static bilingual portfolio with a cinematic city still, warm orange accents,
-social links, and an in-page video scene. No installation or build step.
+A compact cinematic portfolio on an opaque dark background, with two main sections: a profile and video intro,
+then five original social links and a portfolio card. No installation or build step.
 
 ## Preview
 
@@ -10,8 +10,8 @@ http://127.0.0.1:8000/. Publish this directory to a static host.
 
 ## Structure
 
-- `index.html` / `style.css`: introduction, five original social links, film preview.
-- `portfolio.html` / `portfolio.css`: an honest work-in-progress page.
+- `index.html` / `style.css`: profile/video introduction and a grid of social links.
+- `portfolio.html` / `portfolio.css`: a compact work-in-progress page with a video preview.
 - `shared.css`: palette, typography, navigation, buttons, accessibility, footer.
 - `script.js`: Riyadh clock and video controls shared by both pages.
 - Original media remain intact. Pages use optimized image and video derivatives.
@@ -22,8 +22,9 @@ http://127.0.0.1:8000/. Publish this directory to a static host.
 All content and navigation work without JavaScript. The video then displays its
 poster. Reduced-motion preferences disable animation and initial video playback.
 Videos pause when offscreen or in a hidden tab. A visible button controls playback.
-The main page uses 700px and 380px layout breakpoints; shared navigation uses 900px
-and 540px. There is no loading screen blocking content.
+The homepage is capped at 1020px with two columns, collapsing below 660px.
+Social cards use three columns on desktop and two on mobile.
+There is no loading screen blocking content.
 
 ## Analytics and release
 
@@ -35,3 +36,6 @@ Before publishing, check both pages on Safari/iOS, Firefox and Chrome, narrow
 320px screens, tablet and desktop, keyboard navigation, 200% zoom, disabled
 JavaScript, reduced motion and blocked autoplay. Do not replace the social URLs
 without the owner's approval.
+
+The decorative fixed photo and overlay layers have been removed. Video is confined
+to its card; content panels use opaque backgrounds to avoid visual layering.

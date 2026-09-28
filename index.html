@@ -26,114 +26,65 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#main" dir="rtl">تخطّ إلى المحتوى</a>
-    <header class="site-header shell">
-        <a class="wordmark" href="index.html" aria-label="MAZEN — الرئيسية" lang="en">M<span class="brand-dot">.</span></a>
-        <nav class="header-nav" aria-label="التنقل الرئيسي">
-            <a href="portfolio.html" >الأعمال <span lang="en">/ WORK</span></a>
-            <a href="#connect">تواصل <span aria-hidden="true">↗</span></a>
-        </nav>
-        <span class="header-location" lang="en"><span class="status-dot" aria-hidden="true"></span> ABHA, SAUDI ARABIA</span>
-    </header>
-    <main id="main">
-        <section class="hero" aria-labelledby="hero-title">
-            <img class="hero-image" src="assets/images/cinematic-city.jpg" alt="" width="1920" height="1275" fetchpriority="high">
-            <div class="hero-shade" aria-hidden="true"></div>
-            <div class="hero-content shell">
-                <div class="hero-eyebrow"><span class="accent-line" aria-hidden="true"></span><span lang="en">A DIFFERENT WAY TO SEE.</span></div>
-                <div class="hero-layout">
-                    <div class="hero-copy">
-                        <p class="eyebrow" lang="en">VISUAL DIARY / MAZEN</p>
-                        <h1 id="hero-title" lang="en">MAZEN<span class="brand-dot">.</span></h1>
-                        <p class="hero-tagline" dir="rtl">كل لقطة <span>تحكي قصة.</span></p>
-                        <p class="hero-description" dir="rtl">أوثق اللحظات، وأترك للصورة بقية الحكاية.</p>
-                        <div class="hero-actions">
-                            <a class="button button-primary" href="portfolio.html"><span>اكتشف أعمالي</span><span aria-hidden="true">↗</span></a>
-                            <a class="text-link" href="#connect">تواصل معي <span aria-hidden="true">↗</span></a>
-                        </div>
-                    </div>
-                    <div class="viewfinder" aria-hidden="true">
-                        <span class="frame-label">THROUGH MY LENS</span>
-                        <span class="frame-cross">+</span>
-                        <span class="frame-caption">LIGHT. MOTION. FEELING.</span>
-                    </div>
+    <a class="skip-link" href="#main">تخطّ إلى المحتوى</a>
+    <div class="page-shell home-shell">
+        <header class="home-header">
+            <a class="wordmark" href="index.html" aria-label="مازن — الرئيسية" lang="en">M<span class="brand-dot">.</span></a>
+            <nav class="header-links" aria-label="التنقل الرئيسي"><a href="#connect">منصاتي</a><a href="portfolio.html">أعمالي <span aria-hidden="true">↗</span></a></nav>
+            <div class="location"><span class="status-dot" aria-hidden="true"></span><span>أبها، السعودية</span><time id="time" lang="en" aria-label="الوقت في أبها">—</time></div>
+        </header>
+        <main id="main">
+            <section class="intro-card" aria-labelledby="name">
+                <div class="intro-copy">
+                    <div class="profile-chip"><img src="assets/images/mazen-portrait.jpg" alt="الصورة الشخصية لمازن" width="42" height="42"><span lang="en">MAZEN / CINEMATIC</span></div>
+                    <h1 id="name" lang="en">MAZEN<span class="brand-dot">.</span></h1>
+                    <p class="tagline" dir="rtl">كل لقطة <span>تحكي قصة.</span></p>
+                    <p class="intro-description" dir="rtl">أوثق اللحظات، وأترك للصورة بقية الحكاية.</p>
+                    <div class="intro-actions"><a class="button" href="portfolio.html"><span>استكشف أعمالي</span><span aria-hidden="true">↗</span></a><a class="quiet-link" href="#connect">تابعني <span aria-hidden="true">↓</span></a></div>
                 </div>
-                <div class="hero-bottom">
-                    <span lang="en">01 — THE INTRODUCTION</span>
-                    <span class="hero-time" lang="en">ABHA <time id="time" aria-label="Current time in Abha">—</time></span>
-                    <a href="#connect" class="scroll-link">اكتشف أكثر <span aria-hidden="true">↓</span></a>
+                <div class="cinema-frame">
+                    <video id="background-video" muted loop playsinline preload="none" poster="assets/images/video-poster.jpg" aria-hidden="true" tabindex="-1">
+                        <source src="assets/video/background-web.mp4" type="video/mp4">
+                    </video>
+                    <div class="frame-shade" aria-hidden="true"></div>
+                    <span class="frame-label" lang="en">THROUGH MY LENS</span>
+                    <div class="frame-caption"><span dir="rtl">من خلف العدسة</span><span lang="en">LIGHT · MOTION · STORY</span></div>
+                    <button class="motion-toggle" type="button" hidden aria-label="تشغيل المشهد السينمائي">تشغيل المشهد</button>
                 </div>
-            </div>
-        </section>
-
-        <section class="connect-section shell" id="connect" aria-labelledby="connect-title">
-            <div class="section-intro">
-                <p class="eyebrow" lang="en"><span class="section-number">02</span> FIND ME ELSEWHERE</p>
-                <h2 id="connect-title" dir="rtl">نفس الشغف.<br><span class="muted">زوايا مختلفة.</span></h2>
-                <p class="section-description" dir="rtl">من اللقطات السينمائية إلى تفاصيل اليوم.<br>هذه مساحاتي، اختر منصتك.</p>
-                <div class="creator-signature">
-                    <img src="assets/images/profile-small.jpg" alt="صورة الملف الشخصي لمازن أمام الغروب" width="64" height="64" loading="lazy">
-                    <div lang="en"><strong>MAZEN</strong><span>EVERY FRAME TELLS A STORY.</span></div>
-                </div>
-            </div>
-            <nav class="social-links" aria-label="حسابات التواصل الاجتماعي">
-                <a class="social-link" href="https://www.instagram.com/t.11il?igsh=NjBxbmhhcmdrbng3&amp;utm_source=qr" lang="en">
-                    <span class="link-number">01</span>
-                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                    <span class="link-copy"><span class="link-title">Instagram</span><span class="link-caption">FRAMES & MOMENTS</span></span>
-                    <span class="link-arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="social-link" href="https://www.tiktok.com/@t.02il?_r=1&amp;_t=ZS-98aAoPzMKPs" lang="en">
-                    <span class="link-number">02</span>
-                    <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
-                    <span class="link-copy"><span class="link-title">TikTok</span><span class="link-caption">CINEMATIC</span></span>
-                    <span class="link-arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="social-link" href="https://www.tiktok.com/@zero_j65?_r=1&amp;_t=ZS-98aArBAtcRh" lang="en">
-                    <span class="link-number">03</span>
-                    <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
-                    <span class="link-copy"><span class="link-title">TikTok</span><span class="link-caption">GAMING</span></span>
-                    <span class="link-arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="social-link" href="https://snapchat.com/t/84i74TbP" lang="en">
-                    <span class="link-number">04</span>
-                    <i class="fa-brands fa-snapchat" aria-hidden="true"></i>
-                    <span class="link-copy"><span class="link-title">Snapchat</span><span class="link-caption">BEHIND THE SCENES</span></span>
-                    <span class="link-arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="social-link" href="https://t.me/mazendaa" lang="en">
-                    <span class="link-number">05</span>
-                    <i class="fa-brands fa-telegram" aria-hidden="true"></i>
-                    <span class="link-copy"><span class="link-title">Telegram</span><span class="link-caption">LET’S CONNECT</span></span>
-                    <span class="link-arrow" aria-hidden="true">↗</span>
-                </a>
-            </nav>
-        </section>
-
-        <section class="work-section shell" aria-labelledby="work-title">
-            <div class="section-heading">
-                <p class="eyebrow" lang="en"><span class="section-number">03</span> THE VISUAL JOURNAL</p>
-                <h2 id="work-title" dir="rtl">الصورة تتكلم.</h2>
-            </div>
-            <div class="film-card">
-                <video id="background-video" muted loop playsinline preload="none" poster="assets/images/video-poster.jpg" aria-hidden="true" tabindex="-1">
-                    <source src="assets/video/background-web.mp4" type="video/mp4">
-                </video>
-                <div class="film-shade" aria-hidden="true"></div>
-                <div class="film-top"><span lang="en">MAZEN / CINEMATIC</span><span class="film-status">الفصل القادم</span></div>
-                <div class="film-content">
-                    <p class="eyebrow" lang="en">A STORY IN THE MAKING</p>
-                    <h3 lang="en">THE NEXT<br>FRAME<span class="brand-dot">.</span></h3>
-                    <a class="button button-light" href="portfolio.html"><span>مساحة الأعمال</span><span aria-hidden="true">↗</span></a>
-                </div>
-                <button class="motion-toggle" type="button" hidden aria-label="تشغيل فيديو الخلفية">تشغيل المشهد</button>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer shell">
-        <a class="footer-name" href="index.html" lang="en">MAZEN<span class="brand-dot">.</span></a>
-        <p lang="en">EVERY FRAME TELLS A STORY.</p>
-        <small lang="en">© 2026 MAZEN</small>
-    </footer>
+            </section>
+            <section class="connect-panel" id="connect" aria-labelledby="connect-title">
+                <div class="section-heading"><div dir="rtl"><h2 id="connect-title">خلّنا على تواصل</h2><p>لقطات، كواليس، وأكثر.</p></div><span class="section-note" lang="en">FIND ME HERE <span aria-hidden="true">↙</span></span></div>
+                <nav class="social-grid" aria-label="حسابات التواصل الاجتماعي">
+                    <a class="social-card" href="https://www.instagram.com/t.11il?igsh=NjBxbmhhcmdrbng3&amp;utm_source=qr">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        <span class="social-copy"><strong lang="en">Instagram</strong><span lang="ar" dir="auto">صور ولحظات</span></span>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="social-card" href="https://www.tiktok.com/@t.02il?_r=1&amp;_t=ZS-98aAoPzMKPs">
+                        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                        <span class="social-copy"><strong lang="en">TikTok</strong><span lang="en" dir="auto">Cinematic</span></span>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="social-card" href="https://www.tiktok.com/@zero_j65?_r=1&amp;_t=ZS-98aArBAtcRh">
+                        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                        <span class="social-copy"><strong lang="en">TikTok</strong><span lang="en" dir="auto">Gaming</span></span>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="social-card" href="https://snapchat.com/t/84i74TbP">
+                        <i class="fa-brands fa-snapchat" aria-hidden="true"></i>
+                        <span class="social-copy"><strong lang="en">Snapchat</strong><span lang="ar" dir="auto">يومياتي</span></span>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="social-card" href="https://t.me/mazendaa">
+                        <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                        <span class="social-copy"><strong lang="en">Telegram</strong><span lang="ar" dir="auto">تواصل معي</span></span>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="social-card work-card" href="portfolio.html"><i class="fa-regular fa-images" aria-hidden="true"></i><span class="social-copy"><strong>مساحة أعمالي</strong><span>قريبًا</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+                </nav>
+            </section>
+        </main>
+        <footer class="site-footer home-footer"><small lang="en">© 2026 MAZEN</small><span lang="en">EVERY FRAME TELLS A STORY.</span></footer>
+    </div>
 </body>
 </html>

@@ -11,11 +11,12 @@ http://127.0.0.1:8000/. Publish this directory to a static host.
 ## Structure
 
 - `index.html` / `style.css`: profile/video introduction and a grid of social links.
-- `portfolio.html` / `portfolio.css`: a compact work-in-progress page with a video preview.
+- `portfolio.html` / `portfolio.css`: six-photo gallery and a separate section ready for videos.
 - `shared.css`: palette, typography, navigation, buttons, accessibility, footer.
-- `script.js`: Riyadh clock and video controls shared by both pages.
+- `script.js`: homepage Riyadh clock and video controls.
 - Original media remain intact. Pages use optimized image and video derivatives.
-- `portfolio.js` is the original empty placeholder and is not loaded.
+- `portfolio.js`: accessible native photo dialog, previous/next controls and keyboard navigation.
+- `assets/images/portfolio/`: optimized thumbnails and larger viewing copies of the six supplied photos.
 
 ## Behavior
 
@@ -39,3 +40,11 @@ without the owner's approval.
 
 The decorative fixed photo and overlay layers have been removed. Video is confined
 to its card; content panels use opaque backgrounds to avoid visual layering.
+
+## Portfolio gallery
+
+Photos keep their full aspect ratio: three columns on desktop and two below 700px.
+Thumbnails load lazily after the first image; larger versions load on demand.
+Click a photo to open the viewer; use the arrows to navigate and Escape to close.
+Without JavaScript, each thumbnail links directly to its larger image.
+The video section is a placeholder until the owner supplies video work.

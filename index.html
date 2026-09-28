@@ -1,135 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ar">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-72DHX7QHQP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-72DHX7QHQP');
-</script>
-
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik+Spray+Paint&family=Sekuya&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
-
-    <title>Mazen</title>
-
+    <meta name="theme-color" content="#11120f">
+    <meta name="description" content="مازن — كل لقطة تحكي قصة. تصوير سينمائي وتوثيق اللحظات من أبها، السعودية.">
+    <meta property="og:title" content="MAZEN — Every Frame Tells a Story">
+    <meta property="og:description" content="كل لقطة تحكي قصة. أوثق اللحظات.">
+    <meta property="og:type" content="website">
+    <title>MAZEN — Cinematic Stories</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;family=Oswald:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="style.css">
-  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72DHX7QHQP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-72DHX7QHQP');
+    </script>
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-   <div id="splash">
+    <a class="skip-link" href="#main" dir="rtl">تخطّ إلى المحتوى</a>
+    <header class="site-header shell">
+        <a class="wordmark" href="index.html" aria-label="MAZEN — الرئيسية" lang="en">M<span class="brand-dot">.</span></a>
+        <nav class="header-nav" aria-label="التنقل الرئيسي">
+            <a href="portfolio.html" >الأعمال <span lang="en">/ WORK</span></a>
+            <a href="#connect">تواصل <span aria-hidden="true">↗</span></a>
+        </nav>
+        <span class="header-location" lang="en"><span class="status-dot" aria-hidden="true"></span> ABHA, SAUDI ARABIA</span>
+    </header>
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <img class="hero-image" src="assets/images/cinematic-city.jpg" alt="" width="1920" height="1275" fetchpriority="high">
+            <div class="hero-shade" aria-hidden="true"></div>
+            <div class="hero-content shell">
+                <div class="hero-eyebrow"><span class="accent-line" aria-hidden="true"></span><span lang="en">A DIFFERENT WAY TO SEE.</span></div>
+                <div class="hero-layout">
+                    <div class="hero-copy">
+                        <p class="eyebrow" lang="en">VISUAL DIARY / MAZEN</p>
+                        <h1 id="hero-title" lang="en">MAZEN<span class="brand-dot">.</span></h1>
+                        <p class="hero-tagline" dir="rtl">كل لقطة <span>تحكي قصة.</span></p>
+                        <p class="hero-description" dir="rtl">أوثق اللحظات، وأترك للصورة بقية الحكاية.</p>
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="portfolio.html"><span>اكتشف أعمالي</span><span aria-hidden="true">↗</span></a>
+                            <a class="text-link" href="#connect">تواصل معي <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="viewfinder" aria-hidden="true">
+                        <span class="frame-label">THROUGH MY LENS</span>
+                        <span class="frame-cross">+</span>
+                        <span class="frame-caption">LIGHT. MOTION. FEELING.</span>
+                    </div>
+                </div>
+                <div class="hero-bottom">
+                    <span lang="en">01 — THE INTRODUCTION</span>
+                    <span class="hero-time" lang="en">ABHA <time id="time" aria-label="Current time in Abha">—</time></span>
+                    <a href="#connect" class="scroll-link">اكتشف أكثر <span aria-hidden="true">↓</span></a>
+                </div>
+            </div>
+        </section>
 
-    <h1>كل لقطة  <br> تحكي قصة</h1>
+        <section class="connect-section shell" id="connect" aria-labelledby="connect-title">
+            <div class="section-intro">
+                <p class="eyebrow" lang="en"><span class="section-number">02</span> FIND ME ELSEWHERE</p>
+                <h2 id="connect-title" dir="rtl">نفس الشغف.<br><span class="muted">زوايا مختلفة.</span></h2>
+                <p class="section-description" dir="rtl">من اللقطات السينمائية إلى تفاصيل اليوم.<br>هذه مساحاتي، اختر منصتك.</p>
+                <div class="creator-signature">
+                    <img src="assets/images/profile-small.jpg" alt="صورة الملف الشخصي لمازن أمام الغروب" width="64" height="64" loading="lazy">
+                    <div lang="en"><strong>MAZEN</strong><span>EVERY FRAME TELLS A STORY.</span></div>
+                </div>
+            </div>
+            <nav class="social-links" aria-label="حسابات التواصل الاجتماعي">
+                <a class="social-link" href="https://www.instagram.com/t.11il?igsh=NjBxbmhhcmdrbng3&amp;utm_source=qr" lang="en">
+                    <span class="link-number">01</span>
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    <span class="link-copy"><span class="link-title">Instagram</span><span class="link-caption">FRAMES & MOMENTS</span></span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="social-link" href="https://www.tiktok.com/@t.02il?_r=1&amp;_t=ZS-98aAoPzMKPs" lang="en">
+                    <span class="link-number">02</span>
+                    <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                    <span class="link-copy"><span class="link-title">TikTok</span><span class="link-caption">CINEMATIC</span></span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="social-link" href="https://www.tiktok.com/@zero_j65?_r=1&amp;_t=ZS-98aArBAtcRh" lang="en">
+                    <span class="link-number">03</span>
+                    <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                    <span class="link-copy"><span class="link-title">TikTok</span><span class="link-caption">GAMING</span></span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="social-link" href="https://snapchat.com/t/84i74TbP" lang="en">
+                    <span class="link-number">04</span>
+                    <i class="fa-brands fa-snapchat" aria-hidden="true"></i>
+                    <span class="link-copy"><span class="link-title">Snapchat</span><span class="link-caption">BEHIND THE SCENES</span></span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="social-link" href="https://t.me/mazendaa" lang="en">
+                    <span class="link-number">05</span>
+                    <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                    <span class="link-copy"><span class="link-title">Telegram</span><span class="link-caption">LET’S CONNECT</span></span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+            </nav>
+        </section>
 
-</div>
-    <!-- فيديو الخلفية -->
-
-    <video id="background-video" autoplay muted loop playsinline>
-        <source src="assets/video/background.mp4" type="video/mp4">
-    </video>
-
-    <!-- طبقة التعتيم -->
-
-    <div class="overlay"></div>
-
-    <!-- محتوى الموقع -->
-
-    <div class="container" id="content">
-
-    <div class="top-bar">
-
-        <div class="location">
-            📍 Abha, Saudi Arabia
-        </div>
-
-        <div class="time" id="time">
-            00:00
-        </div>
-
-    </div>
-
-    <!-- صورة البروفايل -->
-
-    <div class="profile">
-
-        <img src="assets/images/profile.png" alt="Profile">
-
-    </div>
-    <div class="hero">
-
-    <h1 class="name">
-        MAZEN
-    </h1>
-
-    <p class="job-title">
-        CINEMATIC
-    </p>
-
-    <p class="description">
-        كل لقطة تحكي قصة<br>
-        أوثق اللحظات 
-    </p>
-
-
-   <div class="links-card">
-    <a href="https://www.instagram.com/t.11il?igsh=NjBxbmhhcmdrbng3&utm_source=qr" class="social-btn">
-    <i class="fab fa-instagram"></i>
-    Instagram
-</a>
-
-<a href="https://www.tiktok.com/@t.02il?_r=1&_t=ZS-98aAoPzMKPs" class="social-btn">
-    <i class="fab fa-tiktok"></i>
-    TikTok • Cinematic
-</a>
-
-<a href="https://www.tiktok.com/@zero_j65?_r=1&_t=ZS-98aArBAtcRh" class="social-btn">
-    <i class="fab fa-tiktok"></i>
-    TikTok • Gaming
-</a>
-
-<a href="https://snapchat.com/t/84i74TbP" class="social-btn">
-    <i class="fab fa-snapchat"></i>
-    Snapchat
-</a>
-
-<a href="https://t.me/mazendaa" class="social-btn">
-    <i class="fab fa-telegram"></i>
-    Telegram
-</a>
-<a href="portfolio.html" class="portfolio-btn">
-    <i class="fa-solid fa-images"></i>
-    <span>Portfolio</span>
-    <i class="fa-solid fa-arrow-right"></i>
-</a>
-
-</div>
-</div>
-</div>
-<footer class="footer">
-
-    <p>© 2026 MAZEN</p>
-
-    <span>Every Frame Tells a Story.</span>
-
-</footer>
-    <script src="script.js"></script>
-
+        <section class="work-section shell" aria-labelledby="work-title">
+            <div class="section-heading">
+                <p class="eyebrow" lang="en"><span class="section-number">03</span> THE VISUAL JOURNAL</p>
+                <h2 id="work-title" dir="rtl">الصورة تتكلم.</h2>
+            </div>
+            <div class="film-card">
+                <video id="background-video" muted loop playsinline preload="none" poster="assets/images/video-poster.jpg" aria-hidden="true" tabindex="-1">
+                    <source src="assets/video/background-web.mp4" type="video/mp4">
+                </video>
+                <div class="film-shade" aria-hidden="true"></div>
+                <div class="film-top"><span lang="en">MAZEN / CINEMATIC</span><span class="film-status">الفصل القادم</span></div>
+                <div class="film-content">
+                    <p class="eyebrow" lang="en">A STORY IN THE MAKING</p>
+                    <h3 lang="en">THE NEXT<br>FRAME<span class="brand-dot">.</span></h3>
+                    <a class="button button-light" href="portfolio.html"><span>مساحة الأعمال</span><span aria-hidden="true">↗</span></a>
+                </div>
+                <button class="motion-toggle" type="button" hidden aria-label="تشغيل فيديو الخلفية">تشغيل المشهد</button>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer shell">
+        <a class="footer-name" href="index.html" lang="en">MAZEN<span class="brand-dot">.</span></a>
+        <p lang="en">EVERY FRAME TELLS A STORY.</p>
+        <small lang="en">© 2026 MAZEN</small>
+    </footer>
 </body>
-
 </html>

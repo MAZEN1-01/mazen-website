@@ -1,51 +1,70 @@
-// ==========================================
-// شاشة البداية
-// ==========================================
+(() => {
+    "use strict";
 
-// ==========================================
-// شاشة البداية
-// ==========================================
+    const time = document.getElementById("time");
+    if (time) {
+        const formatter = new Intl.DateTimeFormat("en-US", {
+            timeZone: "Asia/Riyadh",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true
+        });
+        const updateTime = () => {
+            const now = new Date();
+            time.textContent = formatter.format(now);
+            time.dateTime = now.toISOString();
+        };
+        updateTime();
+        setInterval(updateTime, 30000);
+        document.addEventListener("visibilitychange", () => {
+            if (!document.hidden) updateTime();
+        });
+    }
 
-window.addEventListener("load", () => {
+    const video = document.getElementById("background-video");
+    const toggle = document.querySelector(".motion-toggle");
+    if (!video || !toggle) return;
 
-    const splash = document.getElementById("splash");
-    const content = document.getElementById("content");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let wantsPlayback = !reducedMotion.matches;
+    let inView = !("IntersectionObserver" in window);
+    const updateButton = () => {
+        const playing = !video.paused;
+        toggle.textContent = playing ? "إيقاف المشهد" : "تشغيل المشهد";
+        toggle.setAttribute("aria-label", playing ? "إيقاف المشهد السينمائي" : "تشغيل المشهد السينمائي");
+    };
+    const syncPlayback = () => {
+        if (!wantsPlayback || document.hidden || !inView) {
+            video.pause();
+            updateButton();
+            return;
+        }
+        const playRequest = video.play();
+        if (playRequest) playRequest.catch(updateButton);
+    };
 
-    setTimeout(() => {
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(([entry]) => {
+            inView = entry.isIntersecting;
+            syncPlayback();
+        }, { threshold: 0.1 });
+        observer.observe(video);
+    }
 
-        splash.classList.add("hide");
-        content.classList.add("show");
-
-    }, 600);
-
-});
-
-// ==========================================
-// الساعة
-// ==========================================
-
-// ==========================================
-// الساعة
-// ==========================================
-
-function updateTime() {
-
-    const now = new Date();
-
-    const time = now.toLocaleTimeString("en-US", {
-
-        hour: "2-digit",
-
-        minute: "2-digit",
-
-        hour12: true
-
+    toggle.hidden = false;
+    video.addEventListener("play", updateButton);
+    video.addEventListener("pause", updateButton);
+    video.addEventListener("error", () => { toggle.hidden = true; });
+    toggle.addEventListener("click", () => {
+        wantsPlayback = video.paused;
+        syncPlayback();
     });
-
-    document.getElementById("time").textContent = time;
-
-}
-
-updateTime();
-
-setInterval(updateTime, 1000);
+    document.addEventListener("visibilitychange", syncPlayback);
+    const onMotionChange = () => {
+        wantsPlayback = !reducedMotion.matches;
+        syncPlayback();
+    };
+    if (reducedMotion.addEventListener) reducedMotion.addEventListener("change", onMotionChange);
+    else reducedMotion.addListener(onMotionChange);
+    syncPlayback();
+})();

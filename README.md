@@ -48,3 +48,10 @@ Thumbnails load lazily after the first image; larger versions load on demand.
 Click a photo to open the viewer; use the arrows to navigate and Escape to close.
 Without JavaScript, each thumbnail links directly to its larger image.
 The video section is a placeholder until the owner supplies video work.
+
+## Appearance
+
+Both pages load `theme.js` before styles to restore the saved light/dark preference.
+Dark is the default; the header button saves the choice when local storage is available.
+SVG arrows keep their appearance consistent across mobile platforms.
+The homepage name scales from 44px on small phones to 68px on desktop.

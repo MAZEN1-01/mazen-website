@@ -11,7 +11,7 @@ http://127.0.0.1:8000/. Publish this directory to a static host.
 ## Structure
 
 - `index.html` / `style.css`: profile/video introduction and a grid of social links.
-- `portfolio.html` / `portfolio.css`: six-photo gallery and a separate section ready for videos.
+- `portfolio.html` / `portfolio.css`: six-photo gallery and a separate video section.
 - `shared.css`: palette, typography, navigation, buttons, accessibility, footer.
 - `script.js`: homepage Riyadh clock and video controls.
 - Original media remain intact. Pages use optimized image and video derivatives.
@@ -47,7 +47,8 @@ Photos keep their full aspect ratio: three columns on desktop and two below 700p
 Thumbnails load lazily after the first image; larger versions load on demand.
 Click a photo to open the viewer; use the arrows to navigate and Escape to close.
 Without JavaScript, each thumbnail links directly to its larger image.
-The video section is a placeholder until the owner supplies video work.
+The video section contains the supplied 23-second, 24-second and 28-second clips, exported as 720p MP4s with audio and poster frames. Native controls support inline mobile playback; preload is disabled and playback starts on user action.
+The original source videos remain outside the repository. Videos use two columns on desktop and one on mobile.
 
 ## Appearance
 

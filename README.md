@@ -1,58 +1,38 @@
 # MAZEN — Cinematic Stories
 
-A compact cinematic portfolio on an opaque dark background, with two main sections: a profile and video intro,
-then five original social links and a portfolio card. No installation or build step.
+موقع تصوير سينمائي بالعربية، بتصميم داكن دائمًا وبطاقات تواصل زجاجية متجاوبة. ملفات HTML/CSS/JavaScript مباشرة، بدون تثبيت حزم أو قاعدة بيانات.
 
-## Preview
+## المعاينة المحلية
 
-Run `python3 -m http.server 8000 --bind 127.0.0.1` from this directory and open
-http://127.0.0.1:8000/. Publish this directory to a static host.
+من مجلد المشروع:
 
-## Structure
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+```
 
-- `index.html` / `style.css`: profile/video introduction and a grid of social links.
-- `portfolio.html` / `portfolio.css`: six-photo gallery and a separate video section.
-- `shared.css`: palette, typography, navigation, buttons, accessibility, footer.
-- `script.js`: homepage Riyadh clock and video controls.
-- Original media remain intact. Pages use optimized image and video derivatives.
-- `portfolio.js`: accessible native photo dialog, previous/next controls and keyboard navigation.
-- `assets/images/portfolio/`: optimized thumbnails and larger viewing copies of the six supplied photos.
+افتح http://127.0.0.1:8000/.
 
-## Behavior
+## الصفحات
 
-All content and navigation work without JavaScript. The video then displays its
-poster. Reduced-motion preferences disable animation and initial video playback.
-Videos pause when offscreen or in a hidden tab. A visible button controls playback.
-The homepage is capped at 1020px with two columns, collapsing below 660px.
-Social cards use three columns on desktop and two on mobile.
-There is no loading screen blocking content.
+- `index.html`: واجهة بخلفية صور مائلة، وروابط الأعمال وحسابات التواصل الأصلية.
+- `portfolio.html`: خلفية من لقطات الفيديو، تصفية الصور والفيديو، وعارض صور يدعم لوحة المفاتيح.
+- `shared.css`: الهوية الداكنة والتنسيقات المشتركة.
+- `style.css` و`portfolio.css`: تنسيق كل صفحة واستجابتها للجوال.
+- `gallery-filters.js`: تصفية الأعمال مع إبقاء روابط الأقسام صالحة دون JavaScript.
+- `content/works.json`: قائمة فارغة محجوزة لإضافات مستقبلية؛ الأعمال الحالية موجودة في HTML.
 
-## Analytics and release
+إعداد الاستوديو والرفع من الجوال مؤجل، وليس ضمن هذه النسخة المنشورة.
 
-The existing G-72DHX7QHQP measurement ID is included once on each page. Configure
-local/developer traffic filtering and verify production delivery in Tag Assistant.
-Add canonical and absolute social preview URLs once the production domain is known.
+## الوصول والأداء
 
-Before publishing, check both pages on Safari/iOS, Firefox and Chrome, narrow
-320px screens, tablet and desktop, keyboard navigation, 200% zoom, disabled
-JavaScript, reduced motion and blocked autoplay. Do not replace the social URLs
-without the owner's approval.
+- ست صور وثلاثة مقاطع أصلية محفوظة؛ الصور في المعرض تحافظ على نسب أبعادها.
+- لا فيديو تلقائي في الرئيسية؛ المقاطع في المعرض تعمل بطلب المستخدم.
+- الصور الأصلية وروابط الأقسام قابلة للوصول دون JavaScript.
+- عارض الصور يدعم Escape والأسهم وإعادة التركيز إلى الصورة.
+- مقاطع الفيديو تتوقف عند إخفاء الصفحة، وعند تشغيل مقطع آخر أو إخفائها بالتصفية.
+- الحركة تحترم تفضيل تقليل الحركة.
+- روابط التواصل الأصلية ومعرف التحليلات G-72DHX7QHQP محفوظة.
 
-The decorative fixed photo and overlay layers have been removed. Video is confined
-to its card; content panels use opaque backgrounds to avoid visual layering.
+## النشر
 
-## Portfolio gallery
-
-Photos keep their full aspect ratio: three columns on desktop and two below 700px.
-Thumbnails load lazily after the first image; larger versions load on demand.
-Click a photo to open the viewer; use the arrows to navigate and Escape to close.
-Without JavaScript, each thumbnail links directly to its larger image.
-The video section contains the supplied 23-second, 24-second and 28-second clips, exported as 720p MP4s with audio and poster frames. Native controls support inline mobile playback; preload is disabled and playback starts on user action.
-The original source videos remain outside the repository. Videos use two columns on desktop and one on mobile.
-
-## Appearance
-
-Both pages load `theme.js` before styles to restore the saved light/dark preference.
-Dark is the default; the header button saves the choice when local storage is available.
-SVG arrows keep their appearance consistent across mobile platforms.
-The homepage name scales from 44px on small phones to 68px on desktop.
+لا يوجد build. يُنشر المحتوى العام من جذر فرع `main` على GitHub Pages. استخدم الملفات المتتبعة في Git؛ مسودات لوحة الإدارة المحلية ليست ضمن الإصدار.
